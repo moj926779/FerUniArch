@@ -13,35 +13,27 @@
             box-sizing: border-box;
         }
 
-        /* رنگ کل صفحه سفید */
         body {
             background-color: #ffffff; 
             font-family: sans-serif;
         }
 
-        /* === هدر اصلی (کاملاً ریسپانسیو) === */
+        /* === هدر اصلی === */
         .header-container {
             width: 100%; 
             background-color: #ffffff; 
-            
-            /* پدینگ ریسپانسیو */
             padding: 1.25rem 2rem; 
-            
             display: flex;
             justify-content: space-between; 
             align-items: center; 
-            
-            /* تیز و زاویه‌دار */
             border-radius: 0; 
         }
 
-        /* === استایل لوگو (سمت راست) === */
+        /* === لوگو === */
         .brand-logo {
             display: flex;
             align-items: center;
             justify-content: center;
-            
-            /* ارتفاع ریسپانسیو */
             height: clamp(2.5rem, 4vw, 3.5rem);
             width: auto;
             cursor: pointer;
@@ -54,30 +46,28 @@
             display: block;
         }
 
-        /* === استایل منوی همبرگری (سمت چپ) === */
+        /* === منوی همبرگری === */
         .hamburger-menu {
             display: flex;
             flex-direction: column; 
-            
             gap: clamp(0.25rem, 0.4vw, 0.4rem); 
             cursor: pointer;
         }
 
         .hamburger-line {
-            /* عرض و ضخامت ریسپانسیو */
             width: clamp(1.5rem, 2.5vw, 2rem); 
             height: clamp(0.2rem, 0.3vw, 0.25rem); 
-            
             background-color: #0d1b4a; 
             border-radius: 2px; 
         }
 
-        /* === استایل بخش محتوا (عکس اول - بنر) === */
+        /* === بخش محتوا (عکس اول - بنر) === */
         .main-content {
             width: 100%;
             padding: 0 2rem;
-            /* حذف margin-top برای چسبیدن به هدر */
             margin-top: 0;
+            /* این خط جدید: فضای خالی داخل عکس رو حذف می‌کنه */
+            line-height: 0;
         }
 
         .main-content img {
@@ -87,7 +77,7 @@
             border-radius: 0;
         }
 
-        /* === بخش جدید: آثار منتخب نمایشی === */
+        /* === بخش آثار منتخب === */
         .featured-section {
             width: 100%;
             padding: 0 2rem 0 2rem;
@@ -114,7 +104,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        /* === ریسپانسیو برای موبایل و تبلت === */
+        /* === ریسپانسیو === */
         @media (max-width: 768px) {
             .header-container {
                 padding: 1rem 1.25rem; 
@@ -122,6 +112,7 @@
             .main-content {
                 padding: 0 1.25rem; 
                 margin-top: 0;
+                line-height: 0;
             }
             .featured-section {
                 padding: 0 1.25rem 0 1.25rem;
@@ -136,29 +127,21 @@
 </head>
 <body>
 
-    <!-- ۱. هدر -->
     <header class="header-container">
-        
-        <!-- لوگو (سمت راست) -->
         <div class="brand-logo">
             <img src="brand-logo.svg" alt="لوگوی دانشگاه فردوس">
         </div>
-
-        <!-- همبرگر منو (سمت چپ) -->
         <div class="hamburger-menu">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
         </div>
-
     </header>
 
-    <!-- ۲. محتوای اصلی (بنر اول) -->
     <main class="main-content">
         <img src="ferdows-banner.jpg" alt="آرشیو آنلاین دانشگاه فردوس">
     </main>
 
-    <!-- ۳. بخش جدید: آثار منتخب نمایشی -->
     <section class="featured-section">
         <h2 class="featured-title">آثار منتخب نمایشی</h2>
         <div class="featured-image">
