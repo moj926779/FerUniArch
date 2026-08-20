@@ -61,12 +61,11 @@
             border-radius: 2px; 
         }
 
-        /* === استایل محتوا (بنر) - تغییر اصلی اینجاست === */
+        /* === استایل محتوا (بنر) - منفی برای چسبیدن به هدر === */
         .main-content {
             width: 100%;
-            padding: 0 2rem;
-            /* ✅ منفی دادیم تا عکس بالا بیاد و به هدر بچسبد */
-            margin-top: -0.5rem; 
+            padding: 0 2rem; /* دسکتاپ حاشیه استاندارد */
+            margin-top: -0.5rem; /* بالا بردن عکس به سمت هدر */
         }
 
         .main-content img {
@@ -103,23 +102,26 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        /* === ریسپانسیو برای موبایل === */
+        /* === ریسپانسیو برای موبایل (تغییر اصلی اینجاست) === */
         @media (max-width: 768px) {
             .header-container {
-                padding: 1rem 1.25rem; 
+                padding: 1rem 1rem; /* کمی حاشیه هدر را در موبایل کم کردیم */
             }
+            
             .main-content {
-                padding: 0 1.25rem; 
-                /* ✅ در موبایل هم عدد منفی */
-                margin-top: -0.3rem; 
+                padding: 0 0.5rem; /* ✅ حاشیه چپ و راست در موبایل خیلی کم شد (0.5rem) */
+                margin-top: -0.3rem;
             }
+
             .featured-section {
-                padding: 0 1.25rem 0 1.25rem;
+                padding: 0 0.5rem 0 0.5rem; /* ✅ حاشیه بخش پایین هم کم شد */
                 margin-top: 1.8rem;
             }
+
             .featured-title {
                 font-size: 1.3rem;
                 margin-bottom: 1.2rem;
+                padding-right: 0.2rem;
             }
         }
     </style>
