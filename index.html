@@ -29,7 +29,7 @@
             border-radius: 0; 
         }
 
-        /* === لوگو === */
+        /* === استایل لوگو === */
         .brand-logo {
             display: flex;
             align-items: center;
@@ -46,7 +46,7 @@
             display: block;
         }
 
-        /* === منوی همبرگری === */
+        /* === استایل منوی همبرگری === */
         .hamburger-menu {
             display: flex;
             flex-direction: column; 
@@ -61,13 +61,12 @@
             border-radius: 2px; 
         }
 
-        /* === بخش محتوا (عکس اول - بنر) === */
+        /* === استایل محتوا (بنر) - تغییر اصلی اینجاست === */
         .main-content {
             width: 100%;
             padding: 0 2rem;
-            margin-top: 0;
-            /* این خط جدید: فضای خالی داخل عکس رو حذف می‌کنه */
-            line-height: 0;
+            /* ✅ منفی دادیم تا عکس بالا بیاد و به هدر بچسبد */
+            margin-top: -0.5rem; 
         }
 
         .main-content img {
@@ -104,15 +103,15 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        /* === ریسپانسیو === */
+        /* === ریسپانسیو برای موبایل === */
         @media (max-width: 768px) {
             .header-container {
                 padding: 1rem 1.25rem; 
             }
             .main-content {
                 padding: 0 1.25rem; 
-                margin-top: 0;
-                line-height: 0;
+                /* ✅ در موبایل هم عدد منفی */
+                margin-top: -0.3rem; 
             }
             .featured-section {
                 padding: 0 1.25rem 0 1.25rem;
@@ -127,6 +126,7 @@
 </head>
 <body>
 
+    <!-- ۱. هدر -->
     <header class="header-container">
         <div class="brand-logo">
             <img src="brand-logo.svg" alt="لوگوی دانشگاه فردوس">
@@ -138,10 +138,12 @@
         </div>
     </header>
 
+    <!-- ۲. محتوای اصلی (بنر اول) -->
     <main class="main-content">
         <img src="ferdows-banner.jpg" alt="آرشیو آنلاین دانشگاه فردوس">
     </main>
 
+    <!-- ۳. بخش جدید: آثار منتخب نمایشی -->
     <section class="featured-section">
         <h2 class="featured-title">آثار منتخب نمایشی</h2>
         <div class="featured-image">
