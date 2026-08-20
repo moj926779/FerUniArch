@@ -75,7 +75,7 @@
             border-radius: 0;
         }
 
-        /* === بخش آثار منتخب === */
+        /* === بخش آثار منتخب (عکس دوم) === */
         .featured-section {
             width: 100%;
             padding: 0 2rem 0 2rem;
@@ -102,25 +102,52 @@
             box-shadow: none; 
         }
 
-        /* === ✅ استایل جدید: توضیحات زیر عکس === */
+        /* === استایل توضیحات زیر عکس دوم === */
         .image-caption {
-            margin-top: 0.8rem; /* فاصله از عکس */
+            margin-top: 0.8rem; 
             font-size: clamp(1rem, 1.2vw, 1.2rem);
-            color: #2c3e50; /* رنگ سرمه‌ای ملایم */
+            color: #2c3e50; 
             line-height: 1.6;
-            padding-right: 0.5rem; /* هم‌تراز با عنوان */
+            padding-right: 0.5rem; 
         }
 
         .image-caption .title {
-            display: block; /* عنوان را در خط جداگانه می‌برد */
+            display: block; 
             font-weight: bold;
             color: #0d1b4a;
             margin-bottom: 0.2rem;
         }
 
         .image-caption .subtitle {
-            font-size: 0.9em; /* کمی کوچک‌تر از عنوان */
-            opacity: 0.8; /* کمی کمرنگ‌تر */
+            font-size: 0.9em; 
+            opacity: 0.8; 
+        }
+
+        /* === ✅ بخش جدید: عکاسی مفهومی (عکس سوم) === */
+        .conceptual-section {
+            width: 100%;
+            padding: 0 2rem 0 2rem;
+            margin-top: 2.5rem; /* فاصله از بخش قبلی */
+        }
+
+        .conceptual-title {
+            font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+            font-weight: bold;
+            color: #0d1b4a;
+            margin-bottom: 0.5rem; /* فاصله کم با عکس زیرش */
+            padding-right: 0.5rem;
+        }
+
+        .conceptual-image {
+            width: 100%;
+        }
+
+        .conceptual-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0; /* تیز */
+            box-shadow: none;
         }
 
         /* === ریسپانسیو برای موبایل === */
@@ -145,11 +172,22 @@
                 padding-right: 0.2rem;
             }
 
-            /* تنظیم توضیحات در موبایل */
             .image-caption {
                 margin-top: 0.6rem;
                 padding-right: 0.2rem;
                 font-size: 0.95rem;
+            }
+
+            /* ✅ تنظیم بخش جدید در موبایل */
+            .conceptual-section {
+                padding: 0 0.5rem 0 0.5rem;
+                margin-top: 1.8rem;
+            }
+
+            .conceptual-title {
+                font-size: 1.3rem;
+                margin-bottom: 0.3rem;
+                padding-right: 0.2rem;
             }
         }
     </style>
@@ -173,18 +211,25 @@
         <img src="ferdows-banner.jpg" alt="آرشیو آنلاین دانشگاه فردوس">
     </main>
 
-    <!-- ۳. بخش جدید: آثار منتخب نمایشی -->
+    <!-- ۳. بخش آثار منتخب (عکس دوم) -->
     <section class="featured-section">
         <h2 class="featured-title">آثار منتخب نمایشی</h2>
         <div class="featured-image">
             <img src="stage.jpg" alt="آثار منتخب نمایشی">
             
-            <!-- ✅ توضیحات اضافه شده اینجاست -->
             <div class="image-caption">
                 <span class="title">ایستگاه رنگارنگ</span>
                 <span class="subtitle">نمایشی از دانشجویان رشته سینما - تابستان 1405</span>
             </div>
             
+        </div>
+    </section>
+
+    <!-- ۴. بخش جدید: عکاسی مفهومی (عکس سوم) -->
+    <section class="conceptual-section">
+        <h2 class="conceptual-title">عکاسی مفهومی " حافظه مکان"</h2>
+        <div class="conceptual-image">
+            <img src="memory-place.jpg" alt="عکاسی مفهومی حافظه مکان">
         </div>
     </section>
 
