@@ -61,11 +61,11 @@
             border-radius: 2px; 
         }
 
-        /* === استایل محتوا (بنر) - منفی برای چسبیدن به هدر === */
+        /* === استایل محتوا (بنر اول) === */
         .main-content {
             width: 100%;
-            padding: 0 2rem; /* دسکتاپ حاشیه استاندارد */
-            margin-top: -0.5rem; /* بالا بردن عکس به سمت هدر */
+            padding: 0 2rem;
+            margin-top: -0.5rem; 
         }
 
         .main-content img {
@@ -75,18 +75,20 @@
             border-radius: 0;
         }
 
-        /* === بخش آثار منتخب === */
+        /* === بخش آثار منتخب (تغییرات اصلی اینجاست) === */
         .featured-section {
             width: 100%;
             padding: 0 2rem 0 2rem;
-            margin-top: 2.5rem;
+            /* ۱. فاصله از عکس بالایی زیاد بود، آن را کم کردیم */
+            margin-top: 1.5rem; 
         }
 
         .featured-title {
             font-size: clamp(1.5rem, 2.5vw, 2.2rem);
             font-weight: bold;
             color: #0d1b4a;
-            margin-bottom: 1.8rem;
+            /* ۲. فاصله پایین متن تا عکس را خیلی کم کردیم */
+            margin-bottom: 0.5rem; 
             padding-right: 0.5rem;
         }
 
@@ -98,29 +100,31 @@
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            /* ۳. گردی گوشه‌های عکس را حذف کردیم */
+            border-radius: 0; 
+            /* ۴. سایه را هم حذف کردم تا کاملاً تخت شود (دلخواه، می‌توانید برگردانید) */
+            box-shadow: none; 
         }
 
-        /* === ریسپانسیو برای موبایل (تغییر اصلی اینجاست) === */
+        /* === ریسپانسیو برای موبایل === */
         @media (max-width: 768px) {
             .header-container {
-                padding: 1rem 1rem; /* کمی حاشیه هدر را در موبایل کم کردیم */
+                padding: 1rem 1rem;
             }
             
             .main-content {
-                padding: 0 0.5rem; /* ✅ حاشیه چپ و راست در موبایل خیلی کم شد (0.5rem) */
+                padding: 0 0.5rem;
                 margin-top: -0.3rem;
             }
 
             .featured-section {
-                padding: 0 0.5rem 0 0.5rem; /* ✅ حاشیه بخش پایین هم کم شد */
-                margin-top: 1.8rem;
+                padding: 0 0.5rem 0 0.5rem;
+                margin-top: 1.2rem; /* در موبایل فاصله از عکس بالایی کمتر شد */
             }
 
             .featured-title {
                 font-size: 1.3rem;
-                margin-bottom: 1.2rem;
+                margin-bottom: 0.3rem; /* در موبایل فاصله متن و عکس کمتر شد */
                 padding-right: 0.2rem;
             }
         }
