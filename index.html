@@ -75,11 +75,10 @@
             border-radius: 0;
         }
 
-        /* === بخش آثار منتخب (تغییرات اصلی اینجاست) === */
+        /* === بخش آثار منتخب === */
         .featured-section {
             width: 100%;
             padding: 0 2rem 0 2rem;
-            /* ۱. فاصله از عکس بالایی زیاد بود، آن را کم کردیم */
             margin-top: 1.5rem; 
         }
 
@@ -87,7 +86,6 @@
             font-size: clamp(1.5rem, 2.5vw, 2.2rem);
             font-weight: bold;
             color: #0d1b4a;
-            /* ۲. فاصله پایین متن تا عکس را خیلی کم کردیم */
             margin-bottom: 0.5rem; 
             padding-right: 0.5rem;
         }
@@ -100,10 +98,29 @@
             width: 100%;
             height: auto;
             display: block;
-            /* ۳. گردی گوشه‌های عکس را حذف کردیم */
-            border-radius: 0; 
-            /* ۴. سایه را هم حذف کردم تا کاملاً تخت شود (دلخواه، می‌توانید برگردانید) */
+            border-radius: 0; /* گوشه‌ها تیز */
             box-shadow: none; 
+        }
+
+        /* === ✅ استایل جدید: توضیحات زیر عکس === */
+        .image-caption {
+            margin-top: 0.8rem; /* فاصله از عکس */
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            color: #2c3e50; /* رنگ سرمه‌ای ملایم */
+            line-height: 1.6;
+            padding-right: 0.5rem; /* هم‌تراز با عنوان */
+        }
+
+        .image-caption .title {
+            display: block; /* عنوان را در خط جداگانه می‌برد */
+            font-weight: bold;
+            color: #0d1b4a;
+            margin-bottom: 0.2rem;
+        }
+
+        .image-caption .subtitle {
+            font-size: 0.9em; /* کمی کوچک‌تر از عنوان */
+            opacity: 0.8; /* کمی کمرنگ‌تر */
         }
 
         /* === ریسپانسیو برای موبایل === */
@@ -119,13 +136,20 @@
 
             .featured-section {
                 padding: 0 0.5rem 0 0.5rem;
-                margin-top: 1.2rem; /* در موبایل فاصله از عکس بالایی کمتر شد */
+                margin-top: 1.2rem;
             }
 
             .featured-title {
                 font-size: 1.3rem;
-                margin-bottom: 0.3rem; /* در موبایل فاصله متن و عکس کمتر شد */
+                margin-bottom: 0.3rem;
                 padding-right: 0.2rem;
+            }
+
+            /* تنظیم توضیحات در موبایل */
+            .image-caption {
+                margin-top: 0.6rem;
+                padding-right: 0.2rem;
+                font-size: 0.95rem;
             }
         }
     </style>
@@ -154,6 +178,13 @@
         <h2 class="featured-title">آثار منتخب نمایشی</h2>
         <div class="featured-image">
             <img src="stage.jpg" alt="آثار منتخب نمایشی">
+            
+            <!-- ✅ توضیحات اضافه شده اینجاست -->
+            <div class="image-caption">
+                <span class="title">ایستگاه رنگارنگ</span>
+                <span class="subtitle">نمایشی از دانشجویان رشته سینما - تابستان 1405</span>
+            </div>
+            
         </div>
     </section>
 
